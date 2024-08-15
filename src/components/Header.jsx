@@ -83,7 +83,7 @@ const Header = ({ onCurrencyChange }) => {
                     {coin.current_price}
                   </p>
                   <button
-                    className="text-white bg-[#FF0000] px-5 py-1"
+                    className="text-white hover:opacity-55 active:opacity-90 bg-[#FF0000] px-5 py-1"
                     onClick={() => handleRemove(coin.id)}
                   >
                     Remove

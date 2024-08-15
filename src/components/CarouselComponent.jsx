@@ -1,16 +1,7 @@
 import React from "react";
 import { Carousel } from "flowbite-react";
 
-const CarouselComponent = ({ selectedCryptos, currency }) => {
-  const currencySymbols = {
-    USD: "$",
-    AED: "د.إ",
-    RUB: "₽",
-    EUR: "€",
-  };
-
-  const currencySymbol = currencySymbols[currency] || "$";
-
+const CarouselComponent = ({ selectedCryptos }) => {
   // Duplikatlarni olib tashlash
   const uniqueCryptos = Array.from(
     new Set(selectedCryptos.map((c) => c.id))
@@ -27,7 +18,7 @@ const CarouselComponent = ({ selectedCryptos, currency }) => {
 
   return (
     <div className="h-48 sm:h-64 w-full bg-inherit mb-10">
-      <Carousel slideInterval={3000}>
+      <Carousel slideInterval={4000}>
         {slides.map((slide, index) => (
           <div key={index} className="flex justify-center gap-x-40">
             {slide.map((crypto) => (
@@ -55,8 +46,7 @@ const CarouselComponent = ({ selectedCryptos, currency }) => {
                   </p>
                 </div>
                 <p className="text-white text-[22px] font-medium">
-                  {currencySymbol}
-                  {crypto.current_price}
+                  {crypto.current_price.toLocaleString()}
                 </p>
               </div>
             ))}

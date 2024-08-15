@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SingleCryptoPage from "./pages/SingleCryptoPage";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const [currency, setCurrency] = useState("USD");
@@ -26,6 +27,7 @@ function App() {
           element={<SingleCryptoPage currency={currency} />}
         />
       </Routes>
+      <Footer />
     </Router>
   );
 }

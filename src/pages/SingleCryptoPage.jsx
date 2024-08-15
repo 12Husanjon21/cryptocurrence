@@ -77,14 +77,14 @@ function SingleCryptoPage({ currency }) {
           <h2 className="text-[24px] mb-5 font-bold">
             Current Price:{" "}
             <span className="font-normal">
-              {currencySymbol}
+              <span className="ml-2 text-2xl">{currencySymbol}</span>
               {currentPrice?.toLocaleString()}
             </span>
           </h2>
           <h3 className="text-[24px] mb-5 font-bold">
             Market Cap:{" "}
             <span className="font-normal">
-              {currencySymbol}
+              <span className="ml-2 text-2xl">{currencySymbol}</span>
               {marketCap?.toLocaleString()}
             </span>
           </h3>
