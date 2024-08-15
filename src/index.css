@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    body {
+      background-color: #14161a;
+      color: white;
+    }
+  
+    .drawer {
+      width: 450px;
+      background-color: #515151;
+      color: white;
+    }
+  
+    .liner {
+      background-color: rgb(98, 110, 123);
+      border: none;
+    }
+
+        button[data-testid="carousel-right-control"] {
+          display: none;
+        }
+    
+        button[data-testid="carousel-left-control"] {
+          display: none;
+        }
+    
+        button[data-testid="carousel-indicator"] {
+          display: none;
+        }
+
+.bgImage {
+  background-image: url(../public/neuroset.jpeg);
+}
