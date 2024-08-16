@@ -8,7 +8,7 @@ export const getFromLocalStorage = (name) => {
 
 export const customTheme = {
   root: {
-    base: "w-full bg-[#14161a] text-left",
+    base: "w-full bg-[#16171A] text-left",
     shadow:
       "absolute left-0 top-0 -z-10 h-full w-full rounded-lg drop-shadow-md dark:bg-black",
     wrapper: "relative",
@@ -16,7 +16,7 @@ export const customTheme = {
   body: {
     base: "group/body",
     cell: {
-      base: " bg-[#14161a] px-6 py-4",
+      base: " bg-[#16171A] px-6 py-4",
     },
   },
   head: {
