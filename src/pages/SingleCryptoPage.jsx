@@ -33,7 +33,12 @@ function SingleCryptoPage({ currency }) {
     fetchCrypto();
   }, [coinId]);
 
-  if (loading) return <div className="text-center py-10">Loading...</div>;
+  if (loading)
+    return (
+      <div className="text-center py-10">
+        <span className="loader"></span>
+      </div>
+    );
   if (error)
     return <div className="text-center py-10 text-red-500">Error: {error}</div>;
   if (!crypto)

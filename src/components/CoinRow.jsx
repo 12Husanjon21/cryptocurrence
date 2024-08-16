@@ -40,7 +40,7 @@ const CoinRow = ({ crypto, isSelected, onToggle }) => {
         </Link>
       </TableCell>
       <TableCell className="text-end text-[14px] w-[320px]">
-        {crypto.current_price.toLocaleString()}
+        {crypto.current_price}
       </TableCell>
       <TableCell className="text-end pr-2 w-[250px]">
         <div className="flex justify-end items-center">
