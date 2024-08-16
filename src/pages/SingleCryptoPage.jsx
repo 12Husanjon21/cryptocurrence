@@ -59,7 +59,7 @@ function SingleCryptoPage({ currency }) {
 
   return (
     <main className="w-full p-6 grid grid-cols-1 sm:flex min-h-screen gap-x-10">
-      <section className="flex-1 max-w-[447px] max-h-[786px] border-b-2 sm:border-r-2 border-[#808080] text-white pr-4 pb-6">
+      <section className="flex-1 max-w-[447px] max-h-[786px] border-b-2 sm:border-b-0 sm:border-r-2 border-[#808080] text-white pr-4 pb-6">
         <div className="flex justify-center">
           <img
             src={crypto?.image?.large}
