@@ -83,7 +83,7 @@ const Header = ({ onCurrencyChange }) => {
         open={isOpen}
         onClose={handleClose}
         position="right"
-        className="bg-[#515151] text-white w-[500px]"
+        className="bg-[#515151] text-white w-[490px]"
       >
         <h1 className="font-medium text-3xl text-center mb-4">WATCHLIST</h1>
         <div className="px-4">

@@ -40,7 +40,7 @@ const CarouselComponent = ({ selectedCryptos }) => {
                       crypto.price_change_percentage_24h < 0
                         ? "text-[#FF0000]"
                         : "text-[#0ECA80]"
-                    } mt-[4px] text-[15px]`}
+                    } mt-[8px] text-[15px]`}
                   >
                     {crypto.price_change_percentage_24h.toFixed(2)}%
                   </p>
