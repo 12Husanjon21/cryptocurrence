@@ -50,7 +50,7 @@ const Header = ({ onCurrencyChange }) => {
         <div className="flex justify-between items-center px-4 py-2 pt-[10px] max-w-[900px] mx-auto">
           <Link
             to="/"
-            className="text-2xl pb-[5px] text-[#87CEEB] font-semibold"
+            className=" text-xl sm:text-2xl pb-[5px] text-[#87CEEB] font-semibold"
           >
             CRYPTOFOLIO
           </Link>
@@ -83,19 +83,22 @@ const Header = ({ onCurrencyChange }) => {
         open={isOpen}
         onClose={handleClose}
         position="right"
-        className="bg-[#515151] text-white w-[490px]"
+        className="bg-[#515151] text-white w-[330px] sm:w-[490px]"
       >
-        <h1 className="font-medium text-3xl text-center mb-4">WATCHLIST</h1>
+        <h1 className="font-medium sm:text-3xl text-center mb-4">WATCHLIST</h1>
         <div className="px-4">
-          <ul className="grid grid-cols-2 gap-x-10 gap-y-8">
+          <ul className="grid grid-cols-2 gap-x-4 sm:gap-x-10 gap-y-8">
             {uniqueCryptos.length > 0 ? (
               uniqueCryptos.map((coin) => (
                 <li
                   key={coin.id}
-                  className="bg-[#14161a] rounded-[25px] flex flex-col items-center justify-center px-10 py-4"
+                  className="bg-[#14161a] rounded-[8px] sm:rounded-[25px] flex flex-col items-center justify-center px-4 sm:px-10 py-4"
                 >
                   <img src={coin.image} alt={coin.name} className="max-h-28" />
-                  <p className="text-[20px] font-normal mt-9 mb-4">
+                  <p className="mt-1 sm:mt-2 text-base sm:text-2xl">
+                    {coin.symbol.toUpperCase()}
+                  </p>
+                  <p className="text-[20px] font-normal mt-1 sm:mt-2 mb-2 sm:mb-4">
                     {coin.current_price}
                   </p>
                   <button

@@ -12,7 +12,7 @@ const CoinTable = ({ cryptos, selectedCryptos, onToggle }) => {
         <TableHeadCell className="text-end">Price</TableHeadCell>
         <TableHeadCell className="text-end">24h</TableHeadCell>
         <TableHeadCell className="text-start pl-0">Change</TableHeadCell>
-        <TableHeadCell className="rounded-tr-[4px] text-end ">
+        <TableHeadCell className="rounded-tr-[4px] text-end dis-none">
           Market Cap
         </TableHeadCell>
       </TableHead>

@@ -39,7 +39,7 @@ const CoinRow = ({ crypto, isSelected, onToggle }) => {
           <h3 className="text-[14px] mb-2 text-[#A9A9A9]">{crypto.name}</h3>
         </Link>
       </TableCell>
-      <TableCell className="text-end text-[14px] w-[320px]">
+      <TableCell className="text-end text-[14px] sm:p-0 pl-12 w-[320px]">
         {crypto.current_price}
       </TableCell>
       <TableCell className="text-end pr-2 w-[250px]">
@@ -63,7 +63,7 @@ const CoinRow = ({ crypto, isSelected, onToggle }) => {
           {crypto.price_change_percentage_24h.toFixed(2)}%
         </p>
       </TableCell>
-      <TableCell className="text-end">
+      <TableCell className="text-end dis-none">
         {crypto.market_cap.toLocaleString()}
       </TableCell>
     </TableRow>

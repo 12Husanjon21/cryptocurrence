@@ -18,18 +18,18 @@ const CarouselComponent = ({ selectedCryptos }) => {
 
   return (
     <div className="h-48 sm:h-64 w-full bg-inherit mb-10">
-      <Carousel slideInterval={4000}>
+      <Carousel slideInterval={3500}>
         {slides.map((slide, index) => (
-          <div key={index} className="flex justify-center gap-x-40">
+          <div key={index} className="flex justify-center gap-x-40 responsive">
             {slide.map((crypto) => (
               <div
                 key={crypto.id}
-                className="flex flex-col items-center bg-inherit p-4 rounded-md"
+                className="flex flex-col items-center bg-inherit p-2 rounded-md"
               >
                 <img
                   src={crypto.image}
                   alt={crypto.name}
-                  className="w-20 h-20"
+                  className="w-16 h-16 sm:w-20 sm:h-20"
                 />
                 <div className="flex items-center gap-x-[5px]">
                   <h3 className="text-white mt-2">

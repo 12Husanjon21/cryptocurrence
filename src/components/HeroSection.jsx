@@ -9,7 +9,7 @@ export default function HeroSection({ currency }) {
   return (
     <div className="text-center h-[400px] pt-[59px] bgImage">
       <div>
-        <h1 className="text-6xl mb-4 text-[#87CEEB] font-bold">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl mb-4 text-[#87CEEB] font-bold texttrans">
           CRYPTOFOLIO WATCH LIST
         </h1>
         <p className="font-medium text-[#A9A9A9]">

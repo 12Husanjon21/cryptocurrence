@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
     body {
       background-color: #14161a;
       color: white;
@@ -32,6 +40,7 @@
 
 .bgImage {
   background-image: url(../public/neuroset.jpeg);
+  background-size: cover;
 }
 
 
@@ -53,5 +62,60 @@
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .dis-none {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .texttrans {
+    font-size: 45px;
+  }
+  .responsive {
+    column-gap: 50px;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .responsive {
+    column-gap: 90px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .responsive {
+    column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .responsive {
+    column-gap: 10px;
+  }
+  .response {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .single {
+    max-width: 750px;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .single-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    border-right: 0;
   }
 }

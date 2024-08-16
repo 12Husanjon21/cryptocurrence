@@ -25,7 +25,13 @@ ChartJS.register(
 );
 
 const LineChart = () => {
-  return <Line className="max-h-[646px]" data={data} options={options} />;
+  return (
+    <Line
+      className="max-h-[646px] min-h-[200px]"
+      data={data}
+      options={options}
+    />
+  );
 };
 
 export default LineChart;
