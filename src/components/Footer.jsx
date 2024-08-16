@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="footer flex justify-center items-center mt-10 bg-inherit border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-white">
+    <footer className="footer flex justify-center mt-10 bg-inherit border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-white">
       <hr className=" h-[1px] slate" />
       <div className="container p-6 flex justify-between">
-        <Link to="/" className="text-2xl pb-[5px] text-[#87CEEB] font-semibold">
+        <Link to="/" className="text-2xl text-[#87CEEB] font-semibold">
           CRYPTOFOLIO
         </Link>
         <span className="text-slate-400">

@@ -2,8 +2,30 @@ import React from "react";
 import { IoEye } from "react-icons/io5";
 import { TableCell, TableRow } from "flowbite-react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const CoinRow = ({ crypto, isSelected, onToggle }) => {
+  const MySwal = withReactContent(Swal);
+  const handleToggle = (crypto) => {
+    onToggle(crypto);
+    MySwal.fire({
+      title: isSelected
+        ? "Removed successfully from Watchlist and Carousel"
+        : "Added successfully into Watchist and Carousel",
+      icon: isSelected ? "warning" : "success",
+      timer: 2500,
+      showConfirmButton: false,
+      toast: true,
+      position: "top-end",
+      background: "rgb(51 65 85)",
+      color: "white",
+      customClass: {
+        popup: "colored-toast",
+      },
+    });
+  };
+
   return (
     <TableRow className="border-b-[1px] border-[#515151] dark:bg-gray-800">
       <TableCell className="flex gap-x-4">
@@ -23,7 +45,7 @@ const CoinRow = ({ crypto, isSelected, onToggle }) => {
       <TableCell className="text-end pr-2 w-[250px]">
         <div className="flex justify-end items-center">
           <button
-            onClick={() => onToggle(crypto)}
+            onClick={() => handleToggle(crypto)}
             className={`mx-4 ${isSelected ? "text-[#75F94C]" : "text-white"}`}
           >
             <IoEye className="text-2xl" />

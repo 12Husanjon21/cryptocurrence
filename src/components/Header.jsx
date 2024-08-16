@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Button, Drawer, Dropdown } from "flowbite-react";
 import { useSelector, useDispatch } from "react-redux";
 import { remove } from "../redux/selectedCryptos";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const Header = ({ onCurrencyChange }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +13,7 @@ const Header = ({ onCurrencyChange }) => {
     (store) => store.selectedCryptos.selectedCryptos
   );
   const dispatch = useDispatch();
+  const MySwal = withReactContent(Swal);
 
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
@@ -22,6 +25,19 @@ const Header = ({ onCurrencyChange }) => {
 
   const handleRemove = (id) => {
     dispatch(remove(id)); // Redux orqali tanlangan kriptovalyutani olib tashlash
+    MySwal.fire({
+      title: "Removed successfully from the Watchlist and Carousel",
+      icon: "warning",
+      timer: 2500,
+      showConfirmButton: false,
+      toast: true,
+      position: "top-end",
+      background: "rgb(51 65 85)",
+      color: "white",
+      customClass: {
+        popup: "colored-toast",
+      },
+    });
   };
 
   const uniqueCryptos = Array.from(
