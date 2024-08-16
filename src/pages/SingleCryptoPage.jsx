@@ -40,7 +40,20 @@ function SingleCryptoPage({ currency }) {
       </div>
     );
   if (error)
-    return <div className="text-center py-10 text-red-500">Error: {error}</div>;
+    return (
+      <div className="flex flex-col gap-y-3 items-center justify-center min-h-screen text-center text-red-500">
+        <span className="py-2 text-xl px-8 rounded-md bg-slate-800">
+          To mutch requests {error}
+        </span>
+        <button
+          className="ml-4 py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-700"
+          onClick={() => window.location.reload()}
+        >
+          Retry
+        </button>
+      </div>
+    );
+
   if (!crypto)
     return <div className="text-center py-10 text-red-500">No data found</div>;
 
